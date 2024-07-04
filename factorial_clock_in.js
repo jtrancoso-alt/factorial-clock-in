@@ -28,9 +28,7 @@ function sleep(ms) {
 
   console.log("Login Succesful");
 
-  // If not clocked in, start timing
-  // If already clocked in, end timing
-
+  // Check which button to click
   const button = await Promise.race([
     page.waitForSelector(
       "xpath///button[span/span[@title='Fichar desde casa']]"
