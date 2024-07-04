@@ -48,7 +48,7 @@ function sleep(ms) {
     console.log("Turn Ended");
   }
 
-  await sleep(1000);
+  await sleep(400);
 
   console.log("Script ends");
   await browser.close();
