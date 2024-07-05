@@ -8,11 +8,13 @@ function sleep(ms) {
 (async () => {
   const browser = await puppeteer.launch({
     headless: true,
+    args: ["--no-sandbox", "--disable-setuid-sandbox"],
   });
   console.log("Script Starts");
   const page = await browser.newPage();
 
   await page.goto("https://app.factorialhr.com/dashboard");
+  await sleep(400);
 
   // Fill in the login form
   var email = process.env.EMAIL;
